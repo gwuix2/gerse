@@ -1,0 +1,15 @@
+- provide(:title, "Hírek")
+- @posts.each do |post|
+  .row-fluid
+    .span12.post.standard
+      %strong= post.title
+      %br/
+      %br/
+      = simple_format(truncate(post.body, length: 250, separator: ' '))
+      = link_to 'Bővebben', post
+      - if can? :destroy, @post
+        = link_to 'Szerkesztés', edit_post_path(post)
+        = link_to 'Törlés', post, method: :delete, data: { confirm: 'Biztos vagy benne?' }
+%br/
+- if can? :destroy, @post
+  = link_to 'Új Hír', new_post_path

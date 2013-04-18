@@ -1,0 +1,26 @@
+%h1
+  Oldalak listája
+
+%table.table
+  %tr
+    %th ID
+    %th Név
+    %th Tartalom
+    %th Szülő
+    %th
+    %th
+    %th
+
+  - @pages.each do |page|
+    %tr
+      %td= page.id
+      %td= page.name
+      %td= truncate(page.content, :length => 60)
+      %td= page.ancestry
+      %td= link_to 'Mutasd', page, class: "btn"
+      %td= link_to 'Szerkeszt', edit_page_path(page), class: "btn btn-warning"
+      %td= link_to 'Töröl', page, :method => :delete, :data => { :confirm => 'Biztos vagy benne?' }, class: "btn btn-danger"
+
+%br
+
+= link_to 'Új oldal', new_page_path, class: "btn btn-primary"

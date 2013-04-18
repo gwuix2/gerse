@@ -1,0 +1,6 @@
+- provide(:title, @post.title + "szerkesztése")
+%h2 Hír szerkesztése
+
+= render 'form'
+
+= link_to 'Mégse', posts_path, class: "btn"

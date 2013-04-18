@@ -1,0 +1,14 @@
+- provide(:title, @post.title)
+%p#notice= notice
+
+.row-fluid
+  .span12
+    %h2 
+      %strong= @post.title
+
+.row-fluid
+  .span12
+    = simple_format(@post.body)
+
+= link_to 'Szerkesztés', edit_post_path(@post)
+= link_to 'Vissza', posts_path

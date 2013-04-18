@@ -1,0 +1,16 @@
+.navbar
+  .navbar-inner
+    %ul.nav
+      %li{:class => "#{'active' if current_page?(root_path)}"}
+        = link_to "Hírek", root_path
+      - Page.roots.each do |page|
+        %li{:class => "#{'active' if current_page?(page)}"}
+          = link_to page.name, page
+
+
+
+    %form.navbar-search.pull-right
+      %i.icon-search
+      %input.search-query{:placeholder => "Keresés", :type => "text"}/
+
+ 

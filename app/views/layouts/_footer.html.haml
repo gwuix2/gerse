@@ -1,0 +1,7 @@
+.row-fluid
+  .span12
+    - if user_signed_in?
+      Belépve mint
+      %strong
+        = current_user.email
+      = link_to 'Kilépés', destroy_user_session_path, method: :delete

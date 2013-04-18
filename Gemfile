@@ -43,7 +43,14 @@ gem 'will_paginate'
 gem 'acts-as-taggable-on'
 #simple form
 gem 'simple_form'
-
+#haml
+gem 'haml-rails'
+#devise
+gem 'devise'
+#tree based navigation
+gem 'ancestry'
+#wysiwyg
+gem 'bootstrap-wysihtml5-rails'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

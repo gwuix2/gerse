@@ -1,0 +1,6 @@
+.navbar
+  .navbar-inner
+    %a.brand Beállítások
+    %ul.nav
+      %li{:class => "#{'active' if current_page?(pages_path)}"}
+        = link_to 'Oldalak szerkesztése', pages_path
