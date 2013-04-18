@@ -50,7 +50,7 @@ gem 'devise'
 #tree based navigation
 gem 'ancestry'
 #wysiwyg
-gem 'bootstrap-wysihtml5-rails'
+gem 'mercury-rails'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -65,3 +65,4 @@ gem 'bootstrap-wysihtml5-rails'
 
 # To use debugger
 # gem 'debugger'
+gem 'paperclip'

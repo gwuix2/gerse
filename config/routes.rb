@@ -1,6 +1,12 @@
 Gerse::Application.routes.draw do
   
 
+    namespace :mercury do
+      resources :images
+    end
+
+  mount Mercury::Engine => '/'
+
   devise_for :users
   resources :pages
   resources :posts

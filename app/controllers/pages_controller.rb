@@ -1,3 +1,4 @@
+# coding: utf-8
 class PagesController < ApplicationController
   # GET /pages
   # GET /pages.json
@@ -44,7 +45,7 @@ class PagesController < ApplicationController
 
     respond_to do |format|
       if @page.save
-        format.html { redirect_to @page, notice: 'Page was successfully created.' }
+        format.html { redirect_to @page, notice: 'Oldal sikeresen létrehozva.' }
         format.json { render json: @page, status: :created, location: @page }
       else
         format.html { render action: "new" }
@@ -53,6 +54,7 @@ class PagesController < ApplicationController
     end
   end
 
+
   # PUT /pages/1
   # PUT /pages/1.json
   def update
@@ -60,7 +62,7 @@ class PagesController < ApplicationController
 
     respond_to do |format|
       if @page.update_attributes(params[:page])
-        format.html { redirect_to @page, notice: 'Page was successfully updated.' }
+        format.html { redirect_to @page, notice: 'Oldal sikeresen frissítve.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

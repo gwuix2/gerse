@@ -16,11 +16,13 @@
               = page.children if page.children.present?
       .tab-content
         %div{id: @page.name, class: "tab-pane active"}
-          = @page.content
+          %div{:id => @page.name, "data-mercury" => "simple"}
+            = @page.content
         - @page.root.children.each do |page|
           %div{:id => page.name, :class => "tab-pane"}
-            = page.content
+            #page-content.mercury-region{"data-type" => "editable"}
+              = raw page.content
 
-
-
+%br/
+= link_to "Formázás", "/editor" + request.path, class: "btn btn-warning"
 
